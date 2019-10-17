@@ -1,0 +1,18 @@
+server:
+  port: 8072
+
+spring:
+  application:
+    name: entdemo-service
+
+
+axon:
+  kafka:
+    clientid: saga-service
+    defaulttopic: saga.aggregator.event
+    consumer:
+      group-id: "local.event.consumer-group"
+      bootstrapservers: localhost:9092
+
+    properties:
+      security.protocol: PLAINTEXT

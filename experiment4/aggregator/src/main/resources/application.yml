@@ -1,0 +1,20 @@
+
+server:
+  port: 8070
+
+spring:
+  application:
+    name: orchestrator-service
+
+axon:
+  kafka:
+    clientid: saga-service
+    defaulttopic: saga.aggregator.event
+    producer:
+      retries: 0
+      bootstrapservers: localhost:9092
+    consumer:
+      group-id: "local.event.consumer-group"
+
+    properties:
+      security.protocol: PLAINTEXT
