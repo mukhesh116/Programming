@@ -1,0 +1,116 @@
+<html>
+<title>ProjectJS</title>
+
+<head>
+    <script>
+        var Name = "Apple";
+        function Function1() {
+            var num = 45;
+            document.getElementById('function1_result1').innerHTML = "Global variable assined above the function: " + Name;
+            document.getElementById('function1_result2').innerHTML = "Global variable assined above the function: " + num;
+            //document.writeln("Global variable assined above the function: "+Name);
+            //document.writeln("<br>Local variable assined inside the function: "+num);
+        }
+        function Function2(num1, num2, action) {
+            var num1, num2, result;
+            var action;
+            if (action == 'sum') {
+                result = Number(num1) + Number(num2);
+            }
+            if (action == 'sub') {
+                result = Number(num1) - Number(num2);
+            }
+            if (action == 'mul') {
+                result = Number(num1) * Number(num2);
+            }
+            if (action == 'div') {
+                result = Number(num1) / Number(num2);
+            }
+            document.getElementById('function2_result').innerHTML = result;
+            //document.write("Sum of the numbers : "+result);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to JS Practice page</h1>
+    <form>
+        <h3>Practise examples functions of JavaScript</h3>
+        <ol>
+            <li style="font-size: large;">
+                <h4>JavaScript Variables: </h4>
+                <p>A JavaScript variable is the simple name of storage location where data to be stored.<br>
+                    There are two types of variables in JavaScript which are listed below:<br>
+
+                    Local variables: Declare a variable inside of block or function.<br>
+                    Global variables: Declare a variable outside function or with a window object.<br></p>
+                Example:<br>
+                <button type="button" onclick="Function1()">click it</button><br>
+                <output type="text" id="function1_result1"></output><br>
+                <output type="text" id="function1_result2"></output>
+            </li>
+            <li style="font-size: large;">
+                <h4>JavaScript Operator: </h4>
+                <p>JavaScript operators are symbols that are used to compute the value or in other word we can perform
+                    operations on operands.<br>
+                    Arithmetic operators ( +, -, *, / ) are used to compute the value and Assignment operator ( =, +=,
+                    %= )
+                    are used to assign the values to variables.<br></p>
+                Example: <br>
+                <div class="container">
+                    <div class="form-group x col-md-6">
+                        <form>
+                            x: <input type="number" id="num1">
+                            <select name="act" id="act">
+                                <option value="sum">+</option>
+                                <option value="sub">-</option>
+                                <option value="mul">*</option>
+                                <option value="div">/</option>
+                            </select>
+                            y: <input type="number" id="num2">
+                            <button type="button" class="form-group" onclick="Function2(
+                                        document.getElementById('num1').value,document.getElementById('num2').value,
+                                        document.getElementById('act').value)">Result:</button> <output type="number"
+                                id="function2_result"></output>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li style="font-size: large;">
+                <h4>JavaScript Keyword: </h4>
+                <p>
+                    The keywords are the reserved words that have special meaning in JavaScript.<br>
+                    <strong><i>'var'</i></strong> is the keyword used to define the variable<br>
+                <p>Example: var a, b;</p>
+                <strong><i>'function'</i></strong> is the keyword which tells the browser to create a function<br>
+                <p>Example: function GFG(){};</p>
+                </p>
+            </li>
+            <li style="font-size: large;">
+                <h4>JavaScript Data Types: </h4>
+                <p>
+                    JavaScript provides different datatype to hold different values on variable. JavaScript is a dynamic
+                    programming language, it means do not need to specify the type of variable. There are two types of
+                    data types in JavaScript.<br>
+                <ul>
+                    <li>Primitive data type</li>
+                    <li>Non-primitive (reference) data type</li>
+                </ul>
+                Examples:
+                <p>// It store string data type</p>
+                <p>var txt = "Mukhesh";</p>
+                // It store integer data type<br>
+                <p>var a = 5;<br>var b = 5;</p>
+                // It store Boolean data type<br>
+                <p>(a == b )</p>
+                // It store array data type<br>
+                <p> var places= ["GFG", "Computer", "Hello"];</p>
+                // It store object data<br>
+                <p>var Student = {firstName:"Johnny", lastName:"Diaz", age:35, mark:"blueEYE"}</p>
+                </p>
+            </li>
+        </ol>
+    </form>
+</body>
+
+</html>
