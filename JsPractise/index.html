@@ -2,34 +2,8 @@
 <title>ProjectJS</title>
 
 <head>
-    <script>
-        var Name = "Apple";
-        function Function1() {
-            var num = 45;
-            document.getElementById('function1_result1').innerHTML = "Global variable assined above the function: " + Name;
-            document.getElementById('function1_result2').innerHTML = "Global variable assined above the function: " + num;
-            //document.writeln("Global variable assined above the function: "+Name);
-            //document.writeln("<br>Local variable assined inside the function: "+num);
-        }
-        function Function2(num1, num2, action) {
-            var num1, num2, result;
-            var action;
-            if (action == 'sum') {
-                result = Number(num1) + Number(num2);
-            }
-            if (action == 'sub') {
-                result = Number(num1) - Number(num2);
-            }
-            if (action == 'mul') {
-                result = Number(num1) * Number(num2);
-            }
-            if (action == 'div') {
-                result = Number(num1) / Number(num2);
-            }
-            document.getElementById('function2_result').innerHTML = result;
-            //document.write("Sum of the numbers : "+result);
-        }
-    </script>
+    <script type="text/javascript" src="function1.js"></script>  
+    <script type="text/javascript" src="function2.js"></script>
 </head>
 
 <body>
@@ -45,7 +19,7 @@
                     Local variables: Declare a variable inside of block or function.<br>
                     Global variables: Declare a variable outside function or with a window object.<br></p>
                 Example:<br>
-                <button type="button" onclick="Function1()">click it</button><br>
+                <button type="button" onclick="function1()">click it</button><br>
                 <output type="text" id="function1_result1"></output><br>
                 <output type="text" id="function1_result2"></output>
             </li>
@@ -68,7 +42,7 @@
                                 <option value="div">/</option>
                             </select>
                             y: <input type="number" id="num2">
-                            <button type="button" class="form-group" onclick="Function2(
+                            <button type="button" class="form-group" onclick="function2(
                                         document.getElementById('num1').value,document.getElementById('num2').value,
                                         document.getElementById('act').value)">Result:</button> <output type="number"
                                 id="function2_result"></output>
